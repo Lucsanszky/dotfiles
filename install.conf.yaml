@@ -19,6 +19,7 @@
         create: false
         relink: false
         force: false
+    ~/.bash_it: bash_it/
     ~/.gitconfig:
         path: gitconfig
         create: false
@@ -29,8 +30,9 @@
         create: false
         relink: false
         force: false
+    ~/.emacs.d: emacs.d/
     ~/.spacemacs: spacemacs
-    # ~/.vim/syntax: vim/syntax
+    ~/.vim/syntax: vim/syntax
     ~/.vimrc:
         path: vimrc
         create: false
@@ -39,6 +41,3 @@
     ~/.stack/global-project/stack.yaml: stack/global-project/stack.yaml
     ~/.stack/config.yaml: stack/config.yaml
     ~/.stylish-haskell.yaml: stylish-haskell.yaml 
-
-
-

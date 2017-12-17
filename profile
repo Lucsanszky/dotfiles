@@ -8,8 +8,8 @@ export PATH=$HOME/.local/bin:$PATH
 export TERM="screen-256color"
 export PS1="\h:\w 🃏  \u 🃏  $ "
 
-if [ -f ~/.bashrc ]; then
-    source ~/.bashrc
+if [ -f ~/.bash_profile ]; then
+    source ~/.bash_profile
 fi
 
 

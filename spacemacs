@@ -326,12 +326,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   (package-initialize) 
 
-  (exec-path-from-shell-copy-env "PS1")
-
   (when (memq window-system '(mac ns x))
     (exec-path-from-shell-initialize))
-
-  (exec-path-from-shell-copy-env "PS1")
 
   (require 'all-the-icons)
   (require 'powerline)
