@@ -1,1 +1,0 @@
-/Users/dlucsanszky/.vimrc

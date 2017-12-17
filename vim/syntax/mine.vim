@@ -48,4 +48,3 @@ hi TabLineFill ctermfg=235
 hi TabLine ctermfg=grey ctermbg=235 cterm=none
 hi TabLineSel ctermfg=black ctermbg=darkgrey cterm=bold
 hi Title ctermfg=grey
-

@@ -1,5 +1,8 @@
 - clean: ['~']
 
+- shell:
+    - [git submodule update --recursive, Installing submodules]
+
 - link:
     ~/.profile:
         path: profile
@@ -16,9 +19,6 @@
         create: false
         relink: false
         force: false
-    ~/.bash_it:
-        path: bash_it
-        create: true
     ~/.gitconfig:
         path: gitconfig
         create: false
@@ -30,16 +30,7 @@
         relink: false
         force: false
     ~/.spacemacs: spacemacs
-    ~/.emacs.d:
-        path: emacs.d
-        create: false
-        relink: false
-        force: false
-    ~/.vim:
-        path: vim
-        create: false
-        relink: false
-        force: false
+    # ~/.vim/syntax: vim/syntax
     ~/.vimrc:
         path: vimrc
         create: false
