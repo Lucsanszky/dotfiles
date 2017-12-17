@@ -326,6 +326,18 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   (package-initialize) 
 
+  (add-to-list 'custom-theme-load-path "~/.emacs.d/private/themes/")
+)
+
+(defun dotspacemacs/user-config ()
+  "Configuration function for user code.
+This function is called at the very end of Spacemacs initialization after
+
+layers configuration.
+This is the place where most of your configurations should be done. Unless it is
+explicitly specified that a variable should be set before a package is loaded,
+you should place your code here."
+
   (when (memq window-system '(mac ns x))
     (exec-path-from-shell-initialize))
 
@@ -360,23 +372,17 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   (setq neo-theme 'icons)
 
-
-  (add-to-list 'custom-theme-load-path "~/.emacs.d/private/themes/")
-)
-
-(defun dotspacemacs/user-config ()
-  "Configuration function for user code.
-This function is called at the very end of Spacemacs initialization after
-
-layers configuration.
-This is the place where most of your configurations should be done. Unless it is
-explicitly specified that a variable should be set before a package is loaded,
-you should place your code here."
-
   (custom-set-variables
    '(haskell-stylish-on-save t))
 
-  (exec-path-from-shell-copy-env "PS1")
+  (defun bb/setup-term-mode ()
+    (evil-local-set-key 'insert (kbd "C-r") 'bb/send-C-r))
+
+  (defun bb/send-C-r ()
+    (interactive)
+    (term-send-raw-string "\C-r"))
+
+  (add-hook 'term-mode-hook 'bb/setup-term-mode)
 
   (defconst iosevka-char-regexp-alist
     '(
