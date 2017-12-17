@@ -1,0 +1,7 @@
+[user]
+	name = dlucsanszky
+	email = dlucsanszky@armus.com
+[credential]
+	helper = osxkeychain
+[push]
+	default = matching
