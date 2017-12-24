@@ -46,7 +46,7 @@ values."
      auto-completion
      ;; better-defaults
      emacs-lisp
-     ;; git
+     git
      ;; markdown
      ;; org
      (shell :variables
@@ -313,13 +313,10 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
 
-
   (require 'package)
   (add-to-list 'package-archives '("melpa" .
                                    "http://melpa.milkbox.net/packages/"))
-
   (package-initialize)
-
   (add-to-list 'custom-theme-load-path "~/.dotfiles/emacs.d/private/themes/")
 )
 
@@ -335,18 +332,15 @@ you should place your code here."
   (when (memq window-system '(mac ns x))
     (exec-path-from-shell-initialize))
 
-  (require 'all-the-icons)
-  (require 'powerline)
-  (require 'airline-themes)
-
-  (setq all-the-icons-color-icons nil)
+  (use-package all-the-icons
+    :init
+    (setq all-the-icons-color-icons nil))
 
   (use-package powerline
     :init
     (setq powerline-utf-8-separator-left  #xe0b0
           powerline-utf-8-separator-right #xe0b2)
-    (setq powerline-default-separator 'utf-8)
-    )
+    (setq powerline-default-separator 'utf-8))
 
   (use-package airline-themes
     :load-path "airline-themes"
@@ -364,7 +358,8 @@ you should place your code here."
           airline-utf-glyph-branch              #xe0a0
           airline-utf-glyph-readonly            #xe0a2
           airline-utf-glyph-linenumber          #xe0a1)
-    )
+    :config
+    (load-theme 'airline-kylo))
 
   (setq neo-theme 'icons)
 
@@ -451,10 +446,6 @@ you should place your code here."
                             `([,(cdr char-regexp) 0 font-shape-gstring]))))
 
   (set-face-italic 'font-lock-comment-face 1)
-
-  (setq powerline-default-separator 'arrow)
-  (load-theme 'airline-kylo)
-
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
