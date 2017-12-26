@@ -42,3 +42,4 @@
     ~/.stack/config.yaml: stack/config.yaml
     ~/.stack/templates: stack/templates
     ~/.stylish-haskell.yaml: stylish-haskell.yaml 
+    ~/.hindent.yaml: hindent.yaml 
