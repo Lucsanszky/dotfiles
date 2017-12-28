@@ -144,10 +144,11 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
 
-   dotspacemacs-default-font '("Iosevka"
-                               :size 13
-                               :weight light
-                               :powerline-scale 1.1)
+   ;; dotspacemacs-default-font '("Iosevka"
+   ;;                             :size 13
+   ;;                             :weight light
+   ;;                             :powerline-scale 1.1)
+
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
@@ -468,13 +469,18 @@ you should place your code here."
         (load-theme (nth 0 dotspacemacs-themes) t)
         (load-theme 'airline-kylo)
         (set-face-attribute 'default nil
+                            :family "Iosevka"
+                            :height 125
                             :weight 'light))
       (progn
         (mapcar #'disable-theme custom-enabled-themes)
         (load-theme (nth 1 dotspacemacs-themes) t)
         (load-theme 'airline-kylo)
         (set-face-attribute 'default nil
-                            :weight 'ultralight)))
+                            :family "Iosevka"
+                            :height 125
+                            :weight 'ultralight)
+      ))
 
 )
 
@@ -489,7 +495,7 @@ you should place your code here."
    ["#080808" "#d70000" "#67b11d" "#875f00" "#268bd2" "#af00df" "#00ffff" "#b2b2b2"])
  '(custom-safe-themes
    (quote
-    ("ba550b7c0537a8b9b009199c4db591f9b2a59fee9ccd7a9ddcc297ea541cf42c" "68323e64facbdeb924f645a1d937b4d6feef914fbc7f42491012ea71a8d19461" "5b454da93f6466667e7ea0cb2142ce75ba4b8ee174438b7923d710864ca2b159" "4c01eb946a0d202f38f5ac6b26e426b079589a18581728c6a9852fe21e8d61ba" "7a87d77b08046e93ba3ad0477afd025adeeb0eb72920d8d1211f1766d6e85fef" "19342bf72a6f4d1a019aba96062ec3fad73a779ecf8a0f85f03db6398df60c4b" "4ac35f445f52b35626c387c0674a91d8270a4dfeca0e066f88e0cf6e926ceb8f" "7538dfb5afa90764719eddc700765e60f3849e81823be630026d65c93cb312b6" "3b18e0486986ecaccea0cdf6a42e350cbc724ed4e6bcfa6698e08bb030832835" "158013ec40a6e2844dbda340dbabda6e179a53e0aea04a4d383d69c329fba6e6" "256a381a0471ad344e1ed33470e4c28b35fb4489a67eb821181e35f080083c36" "3fa07dd06f4aff80df2d820084db9ecbc007541ce7f15474f1d956c846a3238f" "c79c2eadd3721e92e42d2fefc756eef8c7d248f9edefd57c4887fbf68f0a17af" "251348dcb797a6ea63bbfe3be4951728e085ac08eee83def071e4d2e3211acc3" "3eb93cd9a0da0f3e86b5d932ac0e3b5f0f50de7a0b805d4eb1f67782e9eb67a4" "721bb3cb432bb6be7c58be27d583814e9c56806c06b4077797074b009f322509" "0cd56f8cd78d12fc6ead32915e1c4963ba2039890700458c13e12038ec40f6f5" "a94f1a015878c5f00afab321e4fef124b2fc3b823c8ddd89d360d710fc2bddfc" "1b27e3b3fce73b72725f3f7f040fd03081b576b1ce8bbdfcb0212920aec190ad" "da538070dddb68d64ef6743271a26efd47fbc17b52cc6526d932b9793f92b718" default)))
+    ("2f7db90b930c6271ef0e43ef186c98f69c106ac382115da75cd93bef8dfed378" "ba550b7c0537a8b9b009199c4db591f9b2a59fee9ccd7a9ddcc297ea541cf42c" "68323e64facbdeb924f645a1d937b4d6feef914fbc7f42491012ea71a8d19461" "5b454da93f6466667e7ea0cb2142ce75ba4b8ee174438b7923d710864ca2b159" "4c01eb946a0d202f38f5ac6b26e426b079589a18581728c6a9852fe21e8d61ba" "7a87d77b08046e93ba3ad0477afd025adeeb0eb72920d8d1211f1766d6e85fef" "19342bf72a6f4d1a019aba96062ec3fad73a779ecf8a0f85f03db6398df60c4b" "4ac35f445f52b35626c387c0674a91d8270a4dfeca0e066f88e0cf6e926ceb8f" "7538dfb5afa90764719eddc700765e60f3849e81823be630026d65c93cb312b6" "3b18e0486986ecaccea0cdf6a42e350cbc724ed4e6bcfa6698e08bb030832835" "158013ec40a6e2844dbda340dbabda6e179a53e0aea04a4d383d69c329fba6e6" "256a381a0471ad344e1ed33470e4c28b35fb4489a67eb821181e35f080083c36" "3fa07dd06f4aff80df2d820084db9ecbc007541ce7f15474f1d956c846a3238f" "c79c2eadd3721e92e42d2fefc756eef8c7d248f9edefd57c4887fbf68f0a17af" "251348dcb797a6ea63bbfe3be4951728e085ac08eee83def071e4d2e3211acc3" "3eb93cd9a0da0f3e86b5d932ac0e3b5f0f50de7a0b805d4eb1f67782e9eb67a4" "721bb3cb432bb6be7c58be27d583814e9c56806c06b4077797074b009f322509" "0cd56f8cd78d12fc6ead32915e1c4963ba2039890700458c13e12038ec40f6f5" "a94f1a015878c5f00afab321e4fef124b2fc3b823c8ddd89d360d710fc2bddfc" "1b27e3b3fce73b72725f3f7f040fd03081b576b1ce8bbdfcb0212920aec190ad" "da538070dddb68d64ef6743271a26efd47fbc17b52cc6526d932b9793f92b718" default)))
  '(evil-want-Y-yank-to-eol nil)
  '(haskell-stylish-on-save t t)
  '(package-selected-packages
