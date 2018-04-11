@@ -2,10 +2,10 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 
-[submodule "bash_it"]
-	path = bash_it
-	url = https://github.com/Bash-it/bash-it.git
+[submodule "bash-it"]
+	path = bash-it
+	url = https://github.com/Lucsanszky/bash-it.git
 
 [submodule "emacs.d"]
 	path = emacs.d
-	url = https://github.com/syl20bnr/spacemacs
+	url = https://github.com/Lucsanszky/spacemacs
