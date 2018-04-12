@@ -104,3 +104,9 @@ if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
 fi
 # End Nix
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/dlucsanszky/google-cloud-sdk/path.bash.inc' ]; then source '/Users/dlucsanszky/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/dlucsanszky/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/dlucsanszky/google-cloud-sdk/completion.bash.inc'; fi
