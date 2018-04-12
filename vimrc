@@ -30,7 +30,10 @@ if dein#load_state('/Users/dlucsanszky/.vim/')
 
   " Required:
   call dein#end()
-  call dein#save_state()
+
+  if !exists("g:gui_oni")
+    call dein#save_state()
+  endif
 endif
 
 " Required:
@@ -70,6 +73,7 @@ set incsearch
 set mouse=a
 set history=1000
 set laststatus=2
+
 let g:airline_theme='kyloraven'
 let g:airline_powerline_fonts = 1
 
