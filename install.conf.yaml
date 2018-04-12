@@ -19,7 +19,11 @@
         create: false
         relink: false
         force: false
-    ~/.bash_it: bash_it/
+    ~/.bash-it:
+        path: bash-it/
+        create: true
+        relink: true
+        force: true
     ~/.gitconfig:
         path: gitconfig
         create: false
@@ -30,7 +34,11 @@
         create: false
         relink: false
         force: false
-    ~/.emacs.d: emacs.d/
+    ~/.emacs.d:
+        path: emacs.d/
+        create: true
+        relink: true
+        force: true
     ~/.spacemacs: spacemacs
     ~/.vim/syntax: vim/syntax
     ~/.vimrc:
