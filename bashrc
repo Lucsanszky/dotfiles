@@ -33,11 +33,6 @@ export PATH="/usr/local/texlive/2015/bin/universal-darwin:$PATH"
 # added by Anaconda3 4.0.0 installer
 export PATH="/Users/dlucsanszky/anaconda3/bin:$PATH"
 
-# NIX
-if [ -e /Users/dlucsanszky/.nix-profile/etc/profile.d/nix.sh ]; then
-  . /Users/dlucsanszky/.nix-profile/etc/profile.d/nix.sh;
-fi
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 DOCKER_MACHINE="default"
@@ -102,3 +97,10 @@ export SCM_CHECK=true
 
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
+
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
+
