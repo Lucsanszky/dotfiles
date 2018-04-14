@@ -48,10 +48,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Path to the bash it configuration
-export BASH_IT="/Users/dlucsanszky/.dotfiles/bash_it"
+export BASH_IT="/Users/dlucsanszky/.dotfiles/bash-it"
 
 # Lock and Load a custom theme file
-# location /.bash_it/themes/
+# location /.bash-it/themes/
 export BASH_IT_THEME='kylo'
 
 # (Advanced): Change this to the name of your remote repo if you
