@@ -31,7 +31,7 @@ PATH="$HOME/.cabal/bin:$PATH"
 export PATH="/usr/local/texlive/2015/bin/universal-darwin:$PATH"
 
 # added by Anaconda3 4.0.0 installer
-export PATH="/Users/dlucsanszky/anaconda3/bin:$PATH"
+export PATH="/Users/dlucsanszky/anaconda3/envs/py36/bin:$PATH"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
